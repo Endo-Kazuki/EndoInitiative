@@ -1,0 +1,57 @@
+.error-page {
+  max-width: 800px;
+  margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+  color: #111;
+}
+
+.error-page h4 {
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  color: #b91c1c; /* red */
+}
+
+.error-page h5 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.error-page p {
+  margin: 1rem 0;
+}
+
+.error-page ul {
+  list-style: disc inside;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
+
+.error-page blockquote {
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.error-page hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4f46e5; /* indigo */
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.btn:hover {
+  background-color: #4338ca; /* darker indigo */
+  transform: translateY(-2px);
+}
