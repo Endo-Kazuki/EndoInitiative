@@ -1,3 +1,12 @@
-title: Endo Initiative
+title: "The Endo Initiative"
+description: "Parent company for all endeavors of Endo."
+url: "https://endoinitiative.com"
+baseurl: ""  # always empty for custom domains unless you publish to a subfolder
+markdown: kramdown
 theme: null
 
+favicon: "favicon.ico"
+favicon-32: "favicon-32.png"
+apple-touch-icon: "apple-touch-icon.png"
+android-192: "android-chrome-192.png"
+android-512: "android-chrome-512.png"
