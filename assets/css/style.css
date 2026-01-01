@@ -33,9 +33,41 @@ body.site-body {
 
 /* end of basic site styling */
 
+/* start of footer */
+/* Footer styles */
+.site-footer {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+    color: #9ca3af; /* Tailwind text-gray-400 */
+    margin-top: 3rem; /* Tailwind mt-12 */
+    padding: 2rem 0; /* Tailwind py-8 */
+    border-top: 1px solid #374151; /* Tailwind border-gray-700 */
+}
 
+.footer-container {
+    max-width: 1200px; /* Tailwind container */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Tailwind px-6 */
+    text-align: center;
+}
 
+.footer-links {
+    margin-top: 1rem; /* Tailwind mt-4 */
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Tailwind space-x-4 */
+}
 
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.footer-links a:hover {
+    color: #6366f1; /* Tailwind indigo-400 */
+}
+
+/* end of footer */
 
 .error-page {
   max-width: 800px;
