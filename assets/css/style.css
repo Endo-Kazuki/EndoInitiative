@@ -1,3 +1,42 @@
+
+
+/* Base styles for the site */
+body.site-body {
+    background-color: #1f2937; /* Tailwind bg-gray-900 */
+    color: #f3f4f6; /* Tailwind text-gray-100 */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for main content */
+.site-main {
+    max-width: 1200px; /* roughly Tailwind container */
+    margin: 0 auto; /* center horizontally */
+    padding: 3rem 1.5rem; /* roughly px-6 py-12 */
+}
+
+/* Optional: dark mode support */
+@media (prefers-color-scheme: dark) {
+    body.site-body {
+        background-color: #1f2937;
+        color: #f3f4f6;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body.site-body {
+        background-color: #ffffff;
+        color: #111111;
+    }
+}
+
+/* end of basic site styling */
+
+
+
+
+
 .error-page {
   max-width: 800px;
   margin: 5rem auto;
@@ -55,3 +94,4 @@
   background-color: #4338ca; /* darker indigo */
   transform: translateY(-2px);
 }
+
