@@ -1,7 +1,7 @@
 title: "The Endo Initiative"
 description: "Parent company for all endeavors of Endo."
 url: "https://endoinitiative.com"
-baseurl: "/EndoInitiative"  # use "" when you change to custom domain... always empty for custom domains unless you publish to a subfolder
+baseurl: ""  # use "" when you change to custom domain... always empty for custom domains unless you publish to a subfolder
 markdown: kramdown
 theme: null
 
