@@ -69,6 +69,60 @@ body.site-body {
 
 /* end of footer */
 
+
+
+/* start of header */
+/* Header styles */
+.site-header {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tailwind shadow-md */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-container {
+    max-width: 1200px; /* Tailwind container */
+    margin: 0 auto;
+    padding: 1rem 1.5rem; /* Tailwind px-6 py-4 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem; /* Tailwind text-2xl */
+    font-weight: bold;
+    color: #6366f1; /* Tailwind indigo-400 */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: none; /* hidden on small screens */
+    gap: 1.5rem; /* Tailwind space-x-6 */
+}
+
+.nav-links a {
+    color: #f3f4f6; /* Tailwind text-gray-100 (lighter text) */
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.nav-links a:hover {
+    color: #6366f1; /* Tailwind indigo-400 */
+}
+
+/* Show nav links on medium+ screens */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+}
+
+/* end of header */
+
+
+
 .error-page {
   max-width: 800px;
   margin: 5rem auto;
