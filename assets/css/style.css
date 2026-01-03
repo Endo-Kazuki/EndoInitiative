@@ -1,3 +1,59 @@
+/* Landing page */
+/* Section styles */
+.creator-section {
+    background-color: #4f46e5; /* bg-indigo-600 */
+    color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* shadow-xl */
+    margin: 5rem 0; /* my-20 */
+    padding: 3rem; /* p-12 */
+    text-align: center;
+}
+
+/* Heading */
+.creator-section h2 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+/* Paragraph */
+.creator-section p {
+    font-size: 1.125rem; /* text-lg */
+    color: #e0e7ff; /* text-indigo-100 */
+    margin-bottom: 2rem; /* mb-8 */
+    max-width: 36rem; /* max-w-xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button */
+.learn-more-btn {
+    display: inline-block;
+    background-color: white; /* bg-white */
+    color: #4f46e5; /* text-indigo-600 */
+    font-weight: 600; /* font-semibold */
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 8px 10px rgba(0,0,0,0.15); /* shadow-lg */
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s; /* transitions */
+}
+
+/* Hover effects */
+.learn-more-btn:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+    transform: translateY(-2px); /* hover:translate-y-[-2px] */
+}
+
+
+
+
+
+
+
+
+
 /*fonts */
 
 @font-face {
@@ -27,8 +83,16 @@
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
-
 /*end fonts */
+
+
+
+
+
+
+
+
+
 
 /* Text size utilities */
 .text-xs  { font-size: 0.75rem; }   /* 12px */
@@ -40,6 +104,10 @@ body {
 .text-3xl { font-size: 1.875rem; }  /* 30px */
 .text-4xl { font-size: 2.25rem; }   /* 36px */
 .text-5xl { font-size: 3rem; }      /* 48px */
+
+
+
+
 
 
 /* Base styles for the site */
@@ -96,10 +164,8 @@ body {
 }
 
 /* end of footer */
-
-
-
 /* start of header */
+
 /* Header styles */
 .site-header {
     background-color: #1f2937; /* Tailwind bg-gray-800 */
@@ -148,11 +214,11 @@ body {
         display: flex;
     }
 }
-
 /* end of header */
 
 
 
+/* 404 page */
 .error-page {
   max-width: 800px;
   margin: 5rem auto;
