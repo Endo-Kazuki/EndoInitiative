@@ -1,3 +1,35 @@
+/*fonts */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/Inter.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/assets/fonts/InterItalic.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aladin';
+    src: url('/assets/fonts/Aladin-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/*end fonts */
+
 /* Text size utilities */
 .text-xs  { font-size: 0.75rem; }   /* 12px */
 .text-sm  { font-size: 0.875rem; }  /* 14px */
