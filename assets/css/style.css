@@ -12,7 +12,7 @@
 
 /* Base styles for the site */
 .site-body {
-    background-color: #1f2938; /* Tailwind bg-gray-900 */
+    background-color: #2a3649; /* Tailwind bg-gray-900 */
     color: #f3f4f6; /* Tailwind text-gray-100 */
     font-family: 'Inter', sans-serif;
     margin: 0;
