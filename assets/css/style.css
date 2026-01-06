@@ -75,7 +75,7 @@ body, .site-body {
   margin: 0 auto;
   padding: 1rem 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* site-title left, right side flex group */
   align-items: center;
 }
 
@@ -87,6 +87,19 @@ body, .site-body {
   text-decoration: none;
 }
 
+/* Right-side container: nav links + toggle */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* spacing between links and toggle */
+  margin-left: auto; /* push all right */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .nav-links a {
   color: var(--header-text);
   text-decoration: none;
@@ -96,6 +109,12 @@ body, .site-body {
 .nav-links a:hover {
   color: var(--primary);
 }
+
+/* Theme toggle (already existing) */
+.theme-toggle {
+  margin-left: 1rem;
+}
+
 
 /* Footer */
 .site-footer {
