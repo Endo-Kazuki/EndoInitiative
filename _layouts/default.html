@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 1️⃣ Hide content until theme is applied -->
+    <!-- Hide content until theme is applied -->
     <style>
         html { visibility: hidden; }
     </style>
 
-    
+    <!-- CSS -->
     {% include head.html %}
     <link rel="stylesheet" href="/assets/css/style.css">
+
+
+    <!-- Apply saved theme instantly to prevent flash -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.dataset.theme = savedTheme;
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.dataset.theme = 'dark';
+        }
+        document.documentElement.style.visibility = 'visible';
+    </script>
 </head>
 
 <body class="site-body">
