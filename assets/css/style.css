@@ -1,3 +1,110 @@
+/* Base styles for the site */
+.site-body {
+    background-color: #2a3649; /* Tailwind bg-gray-900 */
+    color: #f3f4f6; /* Tailwind text-gray-100 */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for main content */
+.site-main {
+    max-width: 1200px; /* roughly Tailwind container */
+    margin: 0 auto; /* center horizontally */
+    padding: 3rem 1.5rem; /* roughly px-6 py-12 */
+}
+
+
+/* end of basic site styling */
+
+/* start of footer */
+/* Footer styles */
+.site-footer {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+    color: #9ca3af; /* Tailwind text-gray-400 */
+    margin-top: 3rem; /* Tailwind mt-12 */
+    padding: 2rem 0; /* Tailwind py-8 */
+    border-top: 1px solid #374151; /* Tailwind border-gray-700 */
+}
+
+.footer-container {
+    max-width: 1200px; /* Tailwind container */
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Tailwind px-6 */
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 1rem; /* Tailwind mt-4 */
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Tailwind space-x-4 */
+}
+
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.footer-links a:hover {
+    color: #6366f1; /* Tailwind indigo-400 */
+}
+
+/* end of footer */
+/* start of header */
+
+/* Header styles */
+.site-header {
+    background-color: #1f2937; /* Tailwind bg-gray-800 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tailwind shadow-md */
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-container {
+    max-width: 1200px; /* Tailwind container */
+    margin: 0 auto;
+    padding: 1rem 1.5rem; /* Tailwind px-6 py-4 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-family: 'Aladin', cursive;
+    font-size: 2.25rem;
+    font-weight: 400; /* Aladin only has one weight */
+    color: #6366f1;
+    text-decoration: none;
+}
+
+
+.nav-links {
+    display: none; /* hidden on small screens */
+    gap: 1.5rem; /* Tailwind space-x-6 */
+}
+
+.nav-links a {
+    color: #f3f4f6; /* Tailwind text-gray-100 (lighter text) */
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+
+.nav-links a:hover {
+    color: #6366f1; /* Tailwind indigo-400 */
+}
+
+/* Show nav links on medium+ screens */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+}
+/* end of header */
+
+
 /* ===== Light/Dark mode ===== */
 :root {
   /* Core */
@@ -33,14 +140,6 @@
 
 
 /* ===== THEME TOGGLE ===== */
-
-
-
-
-
-
-
-
 .theme-toggle {
   position: relative;
   width: 64px;
@@ -271,111 +370,7 @@ h6 {
 
 
 
-/* Base styles for the site */
-.site-body {
-    background-color: #2a3649; /* Tailwind bg-gray-900 */
-    color: #f3f4f6; /* Tailwind text-gray-100 */
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
-/* Container for main content */
-.site-main {
-    max-width: 1200px; /* roughly Tailwind container */
-    margin: 0 auto; /* center horizontally */
-    padding: 3rem 1.5rem; /* roughly px-6 py-12 */
-}
-
-
-/* end of basic site styling */
-
-/* start of footer */
-/* Footer styles */
-.site-footer {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    color: #9ca3af; /* Tailwind text-gray-400 */
-    margin-top: 3rem; /* Tailwind mt-12 */
-    padding: 2rem 0; /* Tailwind py-8 */
-    border-top: 1px solid #374151; /* Tailwind border-gray-700 */
-}
-
-.footer-container {
-    max-width: 1200px; /* Tailwind container */
-    margin: 0 auto;
-    padding: 0 1.5rem; /* Tailwind px-6 */
-    text-align: center;
-}
-
-.footer-links {
-    margin-top: 1rem; /* Tailwind mt-4 */
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Tailwind space-x-4 */
-}
-
-.footer-links a {
-    color: #9ca3af;
-    text-decoration: none;
-    transition: color 150ms ease;
-}
-
-.footer-links a:hover {
-    color: #6366f1; /* Tailwind indigo-400 */
-}
-
-/* end of footer */
-/* start of header */
-
-/* Header styles */
-.site-header {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tailwind shadow-md */
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.nav-container {
-    max-width: 1200px; /* Tailwind container */
-    margin: 0 auto;
-    padding: 1rem 1.5rem; /* Tailwind px-6 py-4 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-title {
-    font-family: 'Aladin', cursive;
-    font-size: 2.25rem;
-    font-weight: 400; /* Aladin only has one weight */
-    color: #6366f1;
-    text-decoration: none;
-}
-
-
-.nav-links {
-    display: none; /* hidden on small screens */
-    gap: 1.5rem; /* Tailwind space-x-6 */
-}
-
-.nav-links a {
-    color: #f3f4f6; /* Tailwind text-gray-100 (lighter text) */
-    text-decoration: none;
-    transition: color 150ms ease;
-}
-
-.nav-links a:hover {
-    color: #6366f1; /* Tailwind indigo-400 */
-}
-
-/* Show nav links on medium+ screens */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-    }
-}
-/* end of header */
 
 
 
