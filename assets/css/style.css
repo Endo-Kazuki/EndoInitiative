@@ -1,132 +1,33 @@
-/* Base styles for the site */
-.site-body {
-    background-color: #2a3649; /* Tailwind bg-gray-900 */
-    color: #f3f4f6; /* Tailwind text-gray-100 */
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* ===== Light/Dark mode variables ===== */
 
-/* Container for main content */
-.site-main {
-    max-width: 1200px; /* roughly Tailwind container */
-    margin: 0 auto; /* center horizontally */
-    padding: 3rem 1.5rem; /* roughly px-6 py-12 */
-}
-
-
-/* end of basic site styling */
-
-/* start of footer */
-/* Footer styles */
-.site-footer {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    color: #9ca3af; /* Tailwind text-gray-400 */
-    margin-top: 3rem; /* Tailwind mt-12 */
-    padding: 2rem 0; /* Tailwind py-8 */
-    border-top: 1px solid #374151; /* Tailwind border-gray-700 */
-}
-
-.footer-container {
-    max-width: 1200px; /* Tailwind container */
-    margin: 0 auto;
-    padding: 0 1.5rem; /* Tailwind px-6 */
-    text-align: center;
-}
-
-.footer-links {
-    margin-top: 1rem; /* Tailwind mt-4 */
-    display: flex;
-    justify-content: center;
-    gap: 1rem; /* Tailwind space-x-4 */
-}
-
-.footer-links a {
-    color: #9ca3af;
-    text-decoration: none;
-    transition: color 150ms ease;
-}
-
-.footer-links a:hover {
-    color: #6366f1; /* Tailwind indigo-400 */
-}
-
-/* end of footer */
-/* start of header */
-
-/* Header styles */
-.site-header {
-    background-color: #1f2937; /* Tailwind bg-gray-800 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Tailwind shadow-md */
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-.nav-container {
-    max-width: 1200px; /* Tailwind container */
-    margin: 0 auto;
-    padding: 1rem 1.5rem; /* Tailwind px-6 py-4 */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-title {
-    font-family: 'Aladin', cursive;
-    font-size: 2.25rem;
-    font-weight: 400; /* Aladin only has one weight */
-    color: #6366f1;
-    text-decoration: none;
-}
-
-
-.nav-links {
-    display: none; /* hidden on small screens */
-    gap: 1.5rem; /* Tailwind space-x-6 */
-}
-
-.nav-links a {
-    color: #f3f4f6; /* Tailwind text-gray-100 (lighter text) */
-    text-decoration: none;
-    transition: color 150ms ease;
-}
-
-.nav-links a:hover {
-    color: #6366f1; /* Tailwind indigo-400 */
-}
-
-/* Show nav links on medium+ screens */
-@media (min-width: 768px) {
-    .nav-links {
-        display: flex;
-    }
-}
-/* end of header */
-
-
-/* ===== Light/Dark mode ===== */
+/* LIGHT MODE — default */
 :root {
   /* Core */
-  --bg: #ffffff;
-  --text: #111827;
-
+  --bg: #fdf6e3;          /* soft cream background */
+  --text: #1a1a1a;        /* dark text */
+  
   /* Surfaces */
-  --card: #f1f5f9;
-  --border: #e5e7eb;
+  --card: #ffffff;        /* card / section background */
+  --border: #dcdcdc;      /* light gray border */
 
   /* Accent */
-  --primary: #4f46e5;
+  --primary: #6366f1;     /* indigo for links/buttons */
   --primary-soft: #e0e7ff;
 
-  /* Header */
+  /* Header / Nav */
   --header-bg: #ffffff;
-  --header-text: #111827;
+  --header-text: #1a1a1a;
+
+  /* Footer */
+  --footer-bg: #f3f4f6;
+  --footer-text: #4b5563;
+  --footer-border: #d1d5db;
 }
 
+/* DARK MODE — your current colors */
 [data-theme="dark"] {
-  --bg: #0f172a;
-  --text: #e5e7eb;
+  --bg: #2a3649;           /* Tailwind bg-gray-900 */
+  --text: #f3f4f6;         /* Tailwind text-gray-100 */
 
   --card: #1e293b;
   --border: #334155;
@@ -134,12 +35,106 @@
   --primary: #818cf8;
   --primary-soft: #1e1b4b;
 
-  --header-bg: #020617;
+  --header-bg: #1f2937;    /* Tailwind bg-gray-800 */
   --header-text: #e5e7eb;
+
+  --footer-bg: #1f2937;
+  --footer-text: #9ca3af;
+  --footer-border: #374151;
 }
 
+/* ===== APPLY VARIABLES ===== */
 
-/* ===== THEME TOGGLE ===== */
+body, .site-body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.site-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Aladin', cursive;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: var(--header-text);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer-links a {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+/* Cards / Sections */
+.card, section {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* Links / Buttons */
+a {
+  color: var(--primary);
+}
+
+button {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* ===== THEME TOGGLE (sun/moon) ===== */
+
 .theme-toggle {
   position: relative;
   width: 64px;
@@ -148,14 +143,12 @@
   cursor: pointer;
 }
 
-/* Hide checkbox */
 .theme-toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Track */
 .slider {
   position: absolute;
   inset: 0;
@@ -164,7 +157,6 @@
   transition: background 0.3s ease;
 }
 
-/* Knob */
 .slider::before {
   content: "";
   position: absolute;
@@ -177,16 +169,13 @@
   transition: transform 0.35s ease;
 }
 
-/* Icons */
 .icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
   pointer-events: none;
-  transition:
-    opacity 0.3s ease,
-    transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.4s ease;
 }
 
 .sun {
@@ -200,9 +189,8 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
-/* Checked (dark mode) */
 .theme-toggle input:checked ~ .slider {
-  background: #4f46e5;
+  background: var(--primary);
 }
 
 .theme-toggle input:checked ~ .slider::before {
@@ -219,10 +207,10 @@
   transform: translateY(-50%) rotate(0deg);
 }
 
-/* Hover polish */
 .theme-toggle:hover .slider {
   background: #a5b4fc;
 }
+
 
 
 
