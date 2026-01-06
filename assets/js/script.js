@@ -1,45 +1,25 @@
-const toggleButton = document.getElementById('theme-toggle');
-const body = document.body;
+<script>
+  // Grab the toggle and root
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
 
-// 1. Check Local Storage for user preference
-const currentTheme = localStorage.getItem('theme');
-
-// 2. If a theme is saved, apply it
-if (currentTheme) {
-    body.setAttribute('data-theme', currentTheme);
-    updateButtonText(currentTheme);
-} else {
-    // Optional: Check system preference if no manual save exists
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (systemPrefersDark) {
-        body.setAttribute('data-theme', 'dark');
-        updateButtonText('dark');
+  // 1️⃣ Load saved theme from localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    root.dataset.theme = savedTheme;
+    toggle.checked = savedTheme === 'dark';
+  } else {
+    // 2️⃣ Optional: respect system preference
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      root.dataset.theme = 'dark';
+      toggle.checked = true;
     }
-}
+  }
 
-// 3. Handle the Button Click
-toggleButton.addEventListener('click', () => {
-    // Check if the body currently has the dark theme class
-    const currentAttribute = body.getAttribute('data-theme');
-    
-    if (currentAttribute === 'dark') {
-        // Switch to Light
-        body.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        updateButtonText('light');
-    } else {
-        // Switch to Dark
-        body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        updateButtonText('dark');
-    }
-});
-
-// Helper function to change button text/icon
-function updateButtonText(theme) {
-    if (theme === 'dark') {
-        toggleButton.textContent = "☀️ Light Mode";
-    } else {
-        toggleButton.textContent = "🌙 Dark Mode";
-    }
-}
+  // 3️⃣ Listen for changes on toggle
+  toggle.addEventListener('change', () => {
+    const theme = toggle.checked ? 'dark' : 'light';
+    root.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+  });
+</script>
