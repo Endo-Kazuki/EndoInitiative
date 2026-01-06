@@ -104,6 +104,23 @@ body, .site-body {
   margin-top: 3rem;
   padding: 2rem 0;
   border-top: 1px solid var(--footer-border);
+  text-align: center;          /* center text fallback */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;      /* stack footer content vertically */
+  align-items: center;         /* center horizontally */
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;     /* center the links */
+  gap: 1rem;                   /* spacing between links */
+  margin-top: 1rem;
 }
 
 .footer-links a {
