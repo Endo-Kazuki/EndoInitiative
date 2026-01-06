@@ -1,4 +1,45 @@
+/* ===== Light/Dark mode ===== */
+:root {
+  /* Core */
+  --bg: #ffffff;
+  --text: #111827;
+
+  /* Surfaces */
+  --card: #f1f5f9;
+  --border: #e5e7eb;
+
+  /* Accent */
+  --primary: #4f46e5;
+  --primary-soft: #e0e7ff;
+
+  /* Header */
+  --header-bg: #ffffff;
+  --header-text: #111827;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+
+  --card: #1e293b;
+  --border: #334155;
+
+  --primary: #818cf8;
+  --primary-soft: #1e1b4b;
+
+  --header-bg: #020617;
+  --header-text: #e5e7eb;
+}
+
+
 /* ===== THEME TOGGLE ===== */
+
+
+
+
+
+
+
 
 .theme-toggle {
   position: relative;
