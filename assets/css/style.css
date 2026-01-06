@@ -1,55 +1,88 @@
-/*theme toggle*/
-.nav-container {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  margin-left: auto;
-}
+/* ===== THEME TOGGLE ===== */
 
 .theme-toggle {
-  margin-left: 1rem;
   position: relative;
-  width: 52px;
-  height: 28px;
+  width: 64px;
+  height: 32px;
+  margin-left: 1rem;
+  cursor: pointer;
 }
 
+/* Hide checkbox */
 .theme-toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
+/* Track */
 .slider {
   position: absolute;
   inset: 0;
   background: #cbd5f5;
   border-radius: 999px;
-  cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
+/* Knob */
 .slider::before {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 22px;
-  left: 3px;
-  bottom: 3px;
-  background: white;
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+  background: #ffffff;
   border-radius: 50%;
-  transition: transform 0.3s;
+  transition: transform 0.35s ease;
 }
 
-input:checked + .slider::before {
-  transform: translateX(24px);
+/* Icons */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
 }
 
+.sun {
+  left: 10px;
+  opacity: 1;
+}
 
+.moon {
+  right: 10px;
+  opacity: 0;
+  transform: translateY(-50%) rotate(90deg);
+}
 
+/* Checked (dark mode) */
+.theme-toggle input:checked ~ .slider {
+  background: #4f46e5;
+}
+
+.theme-toggle input:checked ~ .slider::before {
+  transform: translateX(32px);
+}
+
+.theme-toggle input:checked ~ .sun {
+  opacity: 0;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.theme-toggle input:checked ~ .moon {
+  opacity: 1;
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* Hover polish */
+.theme-toggle:hover .slider {
+  background: #a5b4fc;
+}
 
 
 
