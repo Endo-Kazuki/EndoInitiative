@@ -1,33 +1,33 @@
 /* ===== Light/Dark mode variables ===== */
 
-/* LIGHT MODE — default */
+/* LIGHT MODE — refined */
 :root {
   /* Core */
-  --bg: #fdf6e3;          /* soft cream background */
-  --text: #1a1a1a;        /* dark text */
-  
+  --bg: #fafafa;
+  --text: #111827;
+
   /* Surfaces */
-  --card: #ffffff;        /* card / section background */
-  --border: #dcdcdc;      /* light gray border */
+  --card: #ffffff;
+  --border: #e5e7eb;
 
   /* Accent */
-  --primary: #6366f1;     /* indigo for links/buttons */
+  --primary: #6366f1;      /* keep — great choice */
   --primary-soft: #e0e7ff;
 
   /* Header / Nav */
   --header-bg: #ffffff;
-  --header-text: #1a1a1a;
+  --header-text: #111827;
 
   /* Footer */
-  --footer-bg: #f3f4f6;
-  --footer-text: #4b5563;
-  --footer-border: #d1d5db;
+  --footer-bg: #f9fafb;
+  --footer-text: #6b7280;
+  --footer-border: #e5e7eb;
 }
 
 /* DARK MODE — your current colors */
 [data-theme="dark"] {
-  --bg: #2a3649;           /* Tailwind bg-gray-900 */
-  --text: #f3f4f6;         /* Tailwind text-gray-100 */
+  --bg: #2a3649; 
+  --text: #f3f4f6; 
 
   --card: #1e293b;
   --border: #334155;
@@ -35,7 +35,7 @@
   --primary: #818cf8;
   --primary-soft: #1e1b4b;
 
-  --header-bg: #1f2937;    /* Tailwind bg-gray-800 */
+  --header-bg: #1f2937;   
   --header-text: #e5e7eb;
 
   --footer-bg: #1f2937;
