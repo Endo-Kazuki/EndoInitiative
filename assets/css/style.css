@@ -24,24 +24,36 @@
   --footer-border: #e5e7eb;
 }
 
-/* DARK MODE — your current colors */
+/* DARK MODE — refined with previous values */
 [data-theme="dark"] {
-  --bg: #2a3649; 
-  --text: #f3f4f6; 
+  /* Core */
+  --bg: #1f2937;           /* was #2a3649 */
+  --text: #e5e7eb;         /* was #f3f4f6 */
+  --secondary-text: #cbd5e1; /* new: for muted/meta text */
 
-  --card: #1e293b;
-  --border: #334155;
+  /* Surfaces */
+  --card: #111827;         /* was #1e293b */
+  --card-text: #f3f4f6;    /* was (default --text #f3f4f6) */
+  --border: #334155;       /* was #334155 */
 
-  --primary: #818cf8;
-  --primary-soft: #1e1b4b;
+  /* Accent */
+  --primary: #818cf8;      /* was #818cf8 (unchanged) */
+  --primary-soft: #1e1b4b; /* was #1e1b4b */
 
-  --header-bg: #1f2937;   
-  --header-text: #e5e7eb;
+  /* Header / Nav */
+  --header-bg: #1f2937;    /* was #1f2937 */
+  --header-text: #e5e7eb;  /* was #e5e7eb (was #e5e7eb in tweak) */
+  --header-accent: #818cf8; /* new: for links/active states */
 
-  --footer-bg: #1f2937;
-  --footer-text: #9ca3af;
-  --footer-border: #374151;
+  /* Footer */
+  --footer-bg: #1f2937;    /* was #1f2937 */
+  --footer-text: #9ca3af;  /* was #9ca3af */
+  --footer-border: #374151; /* was #374151 */
+
+  /* Optional subtle shadow for depth */
+  --shadow: 0 1px 2px rgba(0,0,0,0.5); /* new */
 }
+
 
 /* ===== APPLY VARIABLES ===== */
 
