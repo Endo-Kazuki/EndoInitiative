@@ -6,14 +6,13 @@
 <script>
   const PASS = "dev123";
 
-  let input;
-  while (input !== PASS) {
-    input = prompt("🔐 Enter password to continue:");
+  while (true) {
+    const input = prompt("🔐 Website under development. Enter dev password to continue:");
 
-    if (input === null || input !== PASS) {
-      document.body.innerHTML = "<h1>Access denied</h1>";
-      throw new Error("Blocked");
-    }
+    if (input === PASS) break;
+
+    document.documentElement.innerHTML = "<h1>Access denied</h1>";
+    throw new Error("Blocked");
   }
 </script>
 
