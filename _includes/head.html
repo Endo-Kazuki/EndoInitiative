@@ -6,7 +6,15 @@
 <script>
   const PASS = "dev123";
 
-  const isDev = new URLSearchParams(window.location.search).get("dev") === "true";
+  const params = new URLSearchParams(window.location.search);
+  const isDevQuery = params.get("dev") === "true";
+
+  // remember dev mode across pages
+  if (isDevQuery) {
+    sessionStorage.setItem("devMode", "true");
+  }
+
+  const isDev = sessionStorage.getItem("devMode") === "true";
 
   if (!isDev) {
     document.documentElement.style.display = "none";
@@ -15,6 +23,7 @@
       const input = prompt("🔐 Under construction. Enter dev password:");
 
       if (input === PASS) {
+        sessionStorage.setItem("devMode", "true");
         document.documentElement.style.display = "";
         break;
       }
