@@ -6,20 +6,24 @@
 <script>
   const PASS = "dev123";
 
-  document.documentElement.style.display = "none";
+  const isDev = new URLSearchParams(window.location.search).get("dev") === "true";
 
-  while (true) {
-    const input = prompt("🔐 Under construction. Enter dev password:");
+  if (!isDev) {
+    document.documentElement.style.display = "none";
 
-    if (input === PASS) {
-      document.documentElement.style.display = "";
-      break;
+    while (true) {
+      const input = prompt("🔐 Under construction. Enter dev password:");
+
+      if (input === PASS) {
+        document.documentElement.style.display = "";
+        break;
+      }
+
+      document.open();
+      document.write("<h1 style='font-family:sans-serif;text-align:center;margin-top:50px;'>Access denied</h1>");
+      document.close();
+      throw new Error("Blocked");
     }
-
-    document.open();
-    document.write("<h1 style='font-family:sans-serif;text-align:center;margin-top:50px;'>Access denied</h1>");
-    document.close();
-    throw new Error("Blocked");
   }
 </script>
 
