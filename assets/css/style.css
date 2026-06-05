@@ -278,7 +278,8 @@ button {
 
 .hero-image {
   width: 100%;
-  border-radius: 50%;
+  object-fit: contain;
+  border-radius: 0;
   display: block;
 }
 
