@@ -282,29 +282,11 @@ button {
   display: block;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 50%;                 /* center vertically */
-  left: 50%;                /* center horizontally */
-  transform: translate(-50%, -50%);
-  width: 90%;               /* lets text stay inside image */
-  pointer-events: none;     /* so clicks go through to button if needed */
-}
-
 .hero-line {
   font-size: 1.4rem;
   font-weight: bold;
   color: white;             /* adjust based on image visibility */
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-left {
-  text-align: left;
-}
-
-.hero-right {
-  text-align: right;
-  margin-top: -10px;        /* pull lines closer together for overlap */
 }
 
 .hero-subheader {
