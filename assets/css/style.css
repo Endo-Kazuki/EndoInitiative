@@ -301,7 +301,8 @@ button {
 .hero-button {
   padding: 10px 25px;
   font-size: 1rem;
-  background-color: #1a73e8;
+  background-color: #d83a2a; 
+/*old  background-color: #1a73e8; */
   color: white;
   border: none;
   border-radius: 5px;
@@ -309,7 +310,8 @@ button {
 }
 
 .hero-button:hover {
-  background-color: #155ab6;
+  background-color: #b7382a;
+/*old  background-color: #155ab6; */
 }
 
 
