@@ -214,8 +214,8 @@ button {
 
 .theme-toggle {
   position: relative;
-  width: 54px;
-  height: 22px;
+  width: 96px;
+  height: 26px;
   margin-left: 1rem;
   cursor: pointer;
   display: inline-block;
@@ -227,49 +227,61 @@ button {
   height: 0;
 }
 
-/* Track */
 .slider {
   position: absolute;
   inset: 0;
-
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 3px;
-
-  transition:
-    border-color 0.25s ease,
-    background-color 0.25s ease;
-  
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  overflow: hidden;
 }
 
-/* Square slider */
 .slider::before {
   content: "";
-
   position: absolute;
   left: 3px;
   top: 3px;
-
-  width: 14px;
-  height: 14px;
-
+  width: 42px;
+  height: 18px;
   background: #d83a2a;
   border-radius: 2px;
-
-  transition:
-    transform 0.25s ease,
-    background-color 0.25s ease;
-
-  box-shadow: 0 0 10px rgba(216,58,42,0.25);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+  z-index: 1;
 }
 
-/* Dark mode position */
 .theme-toggle input:checked ~ .slider::before {
-  transform: translateX(30px);
+  transform: translateX(48px);
 }
 
-/* Hover */
+.toggle-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.toggle-label.light {
+  left: 8px;
+  color: white;
+}
+
+.toggle-label.dark {
+  right: 9px;
+  color: var(--header-text);
+}
+
+.theme-toggle input:checked ~ .slider .light {
+  color: var(--header-text);
+}
+
+.theme-toggle input:checked ~ .slider .dark {
+  color: white;
+}
+
 .theme-toggle:hover .slider {
   border-color: #d83a2a;
 }
@@ -277,7 +289,6 @@ button {
 .theme-toggle:hover .slider::before {
   background: #b7382a;
 }
-
 
 
 
