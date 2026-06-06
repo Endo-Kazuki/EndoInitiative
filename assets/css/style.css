@@ -18,6 +18,7 @@
   /* Header / Nav */
   --header-bg: #ffffff;
   --header-text: #111827;
+  --logo-color: #111827;
 
   /* Footer */
   --footer-bg: #f9fafb;
@@ -45,7 +46,8 @@
   --header-bg: #1f2937;    
   --header-text: #e5e7eb;  
   --header-accent: #818cf8; /* new: for links/active states */
-
+  --logo-color: #e5e7eb;
+  
   /* Footer */
   --footer-bg: #1f2937;    
   --footer-text: #9ca3af;  
@@ -100,7 +102,7 @@ body, .site-body {
   font-family: 'Aladin', cursive;
   font-size: 2.25rem;
   font-weight: 400;
-  color: var(--primary);
+  color: var(--logo-color);
   text-decoration: none;
 }
 
