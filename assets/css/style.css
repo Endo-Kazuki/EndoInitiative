@@ -684,9 +684,12 @@ h6 {
 /* founding page*/
 .about-page {
   max-width: 850px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  line-height: 1.75;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 3px solid #d83a2a;
+  border-radius: 8px;
 }
 
 .about-page p {
