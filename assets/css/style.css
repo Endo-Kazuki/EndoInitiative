@@ -338,16 +338,19 @@ button {
 
 
 
-/* Section styles */
+/* Founder Section */
 .creator-section {
-    background-color: #4f46e5; /* bg-indigo-600 */
-    color: white;
-    border-radius: 0.5rem; /* rounded-lg */
-    box-shadow: 0 10px 15px rgba(0,0,0,0.2); /* shadow-xl */
-    margin: 5rem 0; /* my-20 */
-    padding: 3rem; /* p-12 */
+    background-color: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-top: 3px solid #d83a2a;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+    margin: 5rem 0;
+    padding: 3rem;
     text-align: center;
 }
+
 
 /* Heading */
 .creator-section h2 {
