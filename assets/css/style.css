@@ -616,6 +616,9 @@ h6 {
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
   margin-top: auto;
+  align-self: flex-start;
+  width: auto;
+  max-width: fit-content;
 }
 
 .pillar-btn:hover {
