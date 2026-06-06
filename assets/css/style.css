@@ -258,24 +258,23 @@ button {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   pointer-events: none;
+  color: #9ca3af;
 }
 
 .toggle-label.light {
   left: 8px;
-  color: white;
 }
 
 .toggle-label.dark {
   right: 9px;
-  color: var(--header-text);
 }
 
-.theme-toggle input:checked ~ .slider .light {
-  color: var(--header-text);
+.theme-toggle input:not(:checked) ~ .slider .light {
+  color: white;
 }
 
 .theme-toggle input:checked ~ .slider .dark {
