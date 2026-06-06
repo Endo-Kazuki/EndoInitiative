@@ -73,6 +73,10 @@ body, .site-body {
   padding: 3rem 1.5rem;
 }
 
+
+
+
+
 /* Header */
 .site-header {
   background-color: var(--header-bg);
@@ -106,6 +110,11 @@ body, .site-body {
   align-items: center;
   gap: 1.5rem; /* spacing between links and toggle */
   margin-left: auto; /* push all right */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.25rem;
 }
 
 .nav-links a {
