@@ -340,7 +340,7 @@ button {
 
 /* Founder Section */
 .creator-section {
-    background-color: var(--card);
+    background-color: red !important;
     color: var(--text);
     border: 1px solid var(--border);
     border-top: 3px solid #d83a2a;
@@ -362,7 +362,7 @@ button {
 /* Paragraph */
 .creator-section p {
     font-size: 1.125rem; /* text-lg */
-    color: #e0e7ff; /* text-indigo-100 */
+    color: #var(--secondary-text); /* text-indigo-100 */
     margin-bottom: 2rem; /* mb-8 */
     max-width: 36rem; /* max-w-xl */
     margin-left: auto;
