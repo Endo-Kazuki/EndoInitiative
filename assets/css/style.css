@@ -118,6 +118,7 @@ body, .site-body {
 }
 
 .nav-links a {
+  font-weight: 500;
   position: relative;
   color: var(--header-text);
   text-decoration: none;
