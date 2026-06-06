@@ -586,6 +586,8 @@ h6 {
   text-align: left;
   box-shadow: var(--shadow, 0 10px 15px rgba(0,0,0,0.08));
   min-height: 220px;
+  display: flex;
+  flex-direction: column;
 }
 
 .pillar-card h3 {
@@ -613,6 +615,7 @@ h6 {
   border-radius: 0.5rem;
   text-decoration: none;
   transition: transform 0.2s, background-color 0.2s;
+  margin-top: auto;
 }
 
 .pillar-btn:hover {
