@@ -528,7 +528,7 @@ h6 {
   padding: 2rem;
   text-align: center;
   font-family: sans-serif;
-  color: var(--primary-text);
+  color: var(--text);
 }
 
 .error-page h4 {
