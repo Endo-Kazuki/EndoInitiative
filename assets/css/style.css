@@ -363,7 +363,7 @@ button {
 /* Paragraph */
 .creator-section p {
     font-size: 1.125rem; /* text-lg */
-    color: var(--secondary-text); /* text-indigo-100 */
+    color: var(--text); 
     margin-bottom: 2rem; /* mb-8 */
     max-width: 36rem; /* max-w-xl */
     margin-left: auto;
