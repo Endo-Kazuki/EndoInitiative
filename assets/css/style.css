@@ -681,8 +681,45 @@ h6 {
 
 
 
+/* founding page*/
+.about-page {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  line-height: 1.75;
+}
 
+.about-page p {
+  margin: 0 0 1rem;
+}
 
+.about-page h3 {
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.about-page h4 {
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--text);
+}
+
+.about-page blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #d83a2a;
+  background-color: var(--card);
+  color: var(--text);
+  font-style: italic;
+}
+
+.about-page blockquote p {
+  margin: 0;
+}
+
+.about-page .signature {
+  margin-top: 2rem;
+}
 
 
 
