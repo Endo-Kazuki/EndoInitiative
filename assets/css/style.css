@@ -585,6 +585,7 @@ h6 {
   padding: 2rem;
   text-align: left;
   box-shadow: var(--shadow, 0 10px 15px rgba(0,0,0,0.08));
+  min-height: 220px;
 }
 
 .pillar-card h3 {
@@ -596,6 +597,11 @@ h6 {
   color: var(--secondary-text);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+}
+
+.pillar-card:hover {
+    transform: translateY(-3px);
+    border-top-color: #d83a2a;
 }
 
 .pillar-btn {
