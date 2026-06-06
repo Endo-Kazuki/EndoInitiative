@@ -528,7 +528,7 @@ h6 {
   padding: 2rem;
   text-align: center;
   font-family: sans-serif;
-  color: #ccc;
+  color: var(--primary-text);
 }
 
 .error-page h4 {
@@ -581,6 +581,15 @@ h6 {
  /* background-color: #4338ca; darker indigo */
   transform: translateY(-2px);
 }
+
+
+
+
+
+
+
+
+
 
 
 /* landing page 4 pillar stuff */
