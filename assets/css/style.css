@@ -886,17 +886,30 @@ h6 {
 
 /* ===== PLATFORM DIRECTORY ===== */
 
-/*
-  Columns create the loose masonry-style layout.
-  Short platform sections can fill space underneath
-  taller sections such as YouTube.
-*/
-
 .media-grid {
-  column-count: 3;
-  column-gap: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
 
+  width: 100%;
   padding: 0.5rem 0 1.5rem;
+}
+
+.media-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.media-platform {
+  width: 100%;
+}
+
+.media-platform h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  color: var(--text);
 }
 
 
