@@ -825,8 +825,10 @@ h6 {
   max-width: 1100px;
   margin: 0 auto;
   padding: 3rem;
+
   background-color: var(--card);
   color: var(--text);
+
   border: 1px solid var(--border);
   border-top: 3px solid #d83a2a;
   border-radius: 0.5rem;
@@ -846,15 +848,17 @@ h6 {
 
 .media-header p {
   margin: 0;
+
   color: var(--secondary-text);
   font-size: 1.05rem;
 }
 
 
-/* ===== OFFICIAL ACCOUNT NOTICE ===== */
+/* ===== VERIFICATION NOTICE ===== */
 
 .media-verification {
   max-width: 850px;
+
   margin: 0 auto 3.5rem;
   padding: 2rem 1rem;
 
@@ -864,14 +868,11 @@ h6 {
   border-bottom: 1px solid var(--border);
 }
 
-.media-verification h2 {
-  font-size: 1.4rem;
-  margin: 0 0 1rem;
-}
-
 .media-verification p {
   margin: 0 0 0.8rem;
+
   color: var(--secondary-text);
+
   line-height: 1.6;
 }
 
@@ -888,20 +889,26 @@ h6 {
 
 .media-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
 
   width: 100%;
-  gap: 5rem;
+
+  column-gap: 5rem;
 
   padding: 0.5rem 0 1.5rem;
 }
 
 
-/* Each independent vertical stack */
+/* ===== INDEPENDENT COLUMNS ===== */
 
 .media-column {
   display: flex;
   flex-direction: column;
+
   gap: 3rem;
 
   min-width: 0;
@@ -930,6 +937,7 @@ h6 {
 .media-links {
   display: flex;
   flex-direction: column;
+
   align-items: flex-start;
 
   gap: 0.45rem;
@@ -953,10 +961,18 @@ h6 {
 }
 
 
+/* ===== PLACEHOLDER LINKS ===== */
+
+.media-links a.placeholder-link {
+  color: var(--text);
+}
+
+
 /* ===== ACCOUNT STATUS ===== */
 
 .media-status {
   display: block;
+
   width: fit-content;
 
   margin-top: 0.85rem;
@@ -989,7 +1005,9 @@ h6 {
 
   .media-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4rem;
+
+    column-gap: 4rem;
+    row-gap: 3rem;
   }
 
 }
@@ -1003,19 +1021,24 @@ h6 {
     padding: 2rem 1.25rem;
   }
 
+
   .media-header {
     margin-bottom: 2rem;
   }
+
 
   .media-verification {
     padding: 1.75rem 0;
     margin-bottom: 2.5rem;
   }
 
+
   .media-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+
+    row-gap: 2.25rem;
   }
+
 
   .media-column {
     gap: 2.25rem;
