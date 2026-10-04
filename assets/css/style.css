@@ -868,7 +868,6 @@ h6 {
 .media-card {
   background-color: var(--card);
   border: 1px solid var(--border);
-  border-top: 3px solid #d83a2a;
   border-radius: 0.5rem;
   padding: 1.75rem;
   min-height: 150px;
