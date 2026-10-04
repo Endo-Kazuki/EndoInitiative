@@ -886,14 +886,15 @@ h6 {
 
 /* ===== PLATFORM DIRECTORY ===== */
 
+/*
+  Columns create the loose masonry-style layout.
+  Short platform sections can fill space underneath
+  taller sections such as YouTube.
+*/
+
 .media-grid {
-  display: flex;
-  flex-wrap: wrap;
-
-  justify-content: center;
-  align-items: flex-start;
-
-  gap: 3.5rem 5rem;
+  column-count: 3;
+  column-gap: 5rem;
 
   padding: 0.5rem 0 1.5rem;
 }
@@ -902,10 +903,15 @@ h6 {
 /* ===== INDIVIDUAL PLATFORM ===== */
 
 .media-platform {
-  flex: 0 1 auto;
+  display: inline-block;
+  width: 100%;
 
-  min-width: 180px;
-  max-width: 280px;
+  margin: 0 0 3rem;
+
+  vertical-align: top;
+
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .media-platform h2 {
@@ -981,11 +987,8 @@ h6 {
   }
 
   .media-grid {
-    gap: 3rem 4rem;
-  }
-
-  .media-platform {
-    min-width: 160px;
+    column-count: 2;
+    column-gap: 4rem;
   }
 
 }
@@ -1009,22 +1012,11 @@ h6 {
   }
 
   .media-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    gap: 2.25rem;
-
-    padding-bottom: 0.5rem;
+    column-count: 1;
   }
 
   .media-platform {
-    width: 100%;
-    max-width: none;
-    min-width: 0;
+    margin-bottom: 2.25rem;
   }
 
 }
-
-
-
-
